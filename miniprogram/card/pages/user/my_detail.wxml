@@ -117,3 +117,7 @@
 <import src="../../ccmini-tpls/public/top_tpl.wxml" />
 <template is="topTpl" data="{{topBtnShow,bottom:100}}" />
 <!--回页首 end-->
+
+
+<import src="../../ccmini-tpls/public/menu_tpl.wxml" />
+<template is="menuTpl"   data="{{setup, curMenu:'my_detail'}}" />
