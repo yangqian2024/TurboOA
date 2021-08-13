@@ -1,0 +1,40 @@
+<block>
+	<ccmini-cmpt-comm-list type="user" search="{{search}}" _menus="{{sortMenus}}" _items="{{sortItems}}" router="user/list"
+		topBottom="10" placeholder="搜索姓名，班级，公司，行业" returnUrl='/pages/user/user_index'
+		bind:myCommListEvent="myCommListListener">
+
+		<view slot="searchEnd" bindtap="bindChangeTap">
+			 
+		</view>
+
+		<!-- List Begin -->
+		<view class="user-list">
+			<view class="card-item card-skin{{index%4}}" bindtap="url" data-url="../user/user_detail?id={{item.USER_MINI_OPENID}}"
+				wx:for="{{dataList.list}}" wx:key="key">
+				<view class="card-left">
+					<view class="card-name text-cut">
+						{{item.USER_NAME}}
+						<text class="mini-name">{{item.USER_ITEM}}({{item.USER_ENROLL}}-{{item.USER_GRAD}})</text>
+					</view>
+					<view class="card-desc text-cut" wx:if="{{item.USER_COMPANY}}">{{item.USER_COMPANY}} | {{item.USER_COMPANY_DUTY}}</view> 
+				</view>
+				<view class="card-right">
+					<image mode="aspectFill" src="{{item.USER_PIC}}" ></image>
+				</view>
+			</view>
+
+	 
+
+			<!--load begin-->
+			<import src="../../ccmini-tpls/public/list_load_tpl.wxml" />
+			<template is="listLoadTpl" data="{{skin,dataList}}" />
+			<!--load end-->
+
+		</view>
+		<!-- List END -->
+
+	</ccmini-cmpt-comm-list>
+</block>
+
+<import src="../../ccmini-tpls/public/menu_tpl.wxml" />
+<template is="menuTpl"   data="{{setup, curMenu:'user_index'}}" />

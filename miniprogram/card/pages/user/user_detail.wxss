@@ -1,0 +1,210 @@
+@import "../../style/skin.wxss";
+
+.main-user-detail {
+	padding: 0;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.main-user-detail .top {
+	height: 250rpx;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.main-user-detail .content {
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	width: 100%;
+	margin-bottom: 50rpx;
+}
+
+
+.main-user-detail .content .user-base {
+	padding: 10rpx 20rpx;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	width: 100%;
+	margin-bottom: 30rpx;
+	border-radius: 20rpx;
+}
+
+.main-user-detail .content .user-base .base-item {
+	box-sizing: border-box;
+	width: 100%;
+	display: flex;
+	padding: 10rpx 10rpx;
+	line-height: 1.7;
+	font-size: 28rpx;
+	border-bottom: #f2f2f2 2rpx dashed;
+}
+
+.main-user-detail .content .user-base .base-item:last-child {
+	border-bottom: #fff 0rpx solid;
+}
+
+.main-user-detail .content .user-base .base-item .left {
+	width: 200rpx;
+}
+
+.main-user-detail .content .user-base .base-item .right {
+	flex: 1;
+}
+
+.card-line {
+	width: 100%;
+	height: 100rpx;
+	background-color: #f2f2f2;
+	margin-top: -100rpx;
+	border-top-left-radius: 20rpx;
+	border-top-right-radius: 20rpx;
+}
+
+.main-user-detail .content .list {
+	padding: 0rpx 30rpx;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+}
+
+.main-user-detail .content .list .item {
+	background-color: #fff;
+	margin-bottom: 20rpx;
+	display: flex;
+	border-radius: 20rpx;
+}
+
+.main-user-detail .content .list .item .left {
+	width: 85rpx;
+}
+
+.main-user-detail .content .list .item .left .avatar {
+	margin-top: 28rpx;
+	margin-left: 34rpx;
+}
+
+.main-user-detail .content .list .item .right {
+	flex-grow: 1;
+	padding-left: 30rpx;
+	padding-right: 20rpx;
+}
+
+.main-user-detail .content .list .item .right .name {
+	margin-top: 30rpx;
+}
+
+.main-user-detail .content .list .item .right .name .name-real {
+	max-width: 180rpx;
+	font-size: 30rpx;
+	font-weight: bold;
+}
+
+.main-user-detail .content .list .item .right .desc {
+	margin-top: 28rpx;
+	font-size: 28rpx;
+	line-height: 40rpx;
+	padding-right: 30rpx;
+}
+
+.main-user-detail .content .list .item .right .param {
+	margin-top: 28rpx;
+	height: 34rpx;
+	margin-bottom: 28rpx;
+}
+
+.super-card { 
+	box-shadow: 0px 30px 30px -20px #5C9DFE;
+	background: #fff;
+	border-radius: 50rpx !important;
+	height: 450rpx !important;
+	margin-bottom: 60rpx;
+	background-image: linear-gradient(45deg, #1547FF, #28A3FC);
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	padding: 50rpx !important;
+	color: #fff;
+	margin-top: -200rpx; 
+}
+ 
+.super-card .card-name {
+	width: 100%;
+	height: 140rpx;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.super-card .card-name .card-name-item {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.card-name-item .name {
+	font-size: 45rpx;
+}
+
+.card-name-item .duty {
+	font-size: 30rpx;
+	margin-top: 20rpx;
+	width: 450rpx;
+}
+
+.card-name image {
+	width: 120rpx !important;
+	height: 120rpx !important;
+	border-radius: 50%;
+}
+
+.card-x {
+	width: 250rpx;
+	height: 1rpx;
+	background-color: #fff;
+}
+
+.card-desc {
+	margin-top: 40rpx;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.card-desc text {
+	height: 50rpx;
+	width: 600rpx;
+}
+
+.icon-head {
+	color: #1547FF;
+	font-size: 36rpx;
+}
+
+.icon-head-text {
+	color: #999;
+	font-size: 30rpx;
+}
+
+.share-card-box {
+	display: flex; 
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 50rpx;
+}
+
+.share-card {
+	color:#fff;
+	width: 200rpx;
+	border-radius:60rpx;
+	height:70rpx;
+}
+
+@import "./user_detail_top.wxss";

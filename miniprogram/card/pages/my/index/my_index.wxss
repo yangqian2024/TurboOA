@@ -1,0 +1,205 @@
+@import "../../../style/skin.wxss";
+page{
+	background-color: #f8f8f8;
+}
+.main-my-index {
+	padding: 0;
+} 
+
+.clearbtn-share {
+	display: flex;
+	flex-direction: column;
+}
+
+.main-my-index .avatar-open {
+	width: 130rpx;
+	height: 130rpx;
+	clip-path: circle(66rpx at center);
+}
+
+.icon-big {
+	font-size: 50rpx;
+	color: #666;
+	opacity: 1;
+}
+.topcard{
+	height:200rpx;
+	width:100%;
+	background-color: #1547FF;
+}
+.topcard-tt{
+	height:50rpx;
+	width:100%;
+	border-top-left-radius: 20rpx;
+	border-top-right-radius: 20rpx;
+	background-color: #fff;
+	margin-top:-20rpx;
+}
+.main-my-index .user { 
+	box-shadow: 0px 30px 30px -20px #5C9DFE;
+	position: relative;
+	margin-top:-170rpx;
+	margin-bottom:40rpx;
+	width:90%!important; 
+	border-radius: 50rpx;
+	background-color: #0E9489;
+	min-height: 280rpx;
+	width: 100%;
+	display: flex;
+	box-sizing: border-box;
+	padding: 60rpx 40rpx 0rpx 40rpx;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center; 
+}
+
+
+.main-my-index .user .user-bar {
+	flex: 1;
+	display: flex;
+	box-sizing: border-box;
+	width: 100%;
+	z-index: 999;
+}
+
+.main-my-index .user .user-bar .avatar {
+	height: 130rpx;
+	width: 130rpx;
+	border: 0rpx;
+}
+
+.main-my-index .user .user-bar .detail {
+	width: 400rpx;
+	margin-left: 40rpx;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	color: #fff;
+	box-sizing: border-box;
+}
+
+.main-my-index .user .user-bar .detail .name {
+	font-size: 36rpx;
+	font-weight: bold;
+	color: #fff;
+}
+
+.main-my-index .user .user-bar .detail .desc {
+	margin-top: 15rpx;
+	color: #fff;
+}
+
+.main-my-index .user .user-bar .detail .desc .bg-gray {
+	opacity: .5;
+}
+
+.main-my-index .user .right-top {
+	position: absolute;
+	top: 20rpx;
+	right: 20rpx;
+}
+
+.main-my-index .user .left-top {
+	position: absolute;
+	top: 20rpx;
+	left: 20rpx;
+}
+
+.main-my-index .user .user-share {
+	top: 30rpx;
+	right: 30rpx;
+	position: absolute;
+	height: 50rpx;
+	width: 50rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	z-index: 999;
+	background-color: #fff !important;
+	opacity: .8;
+}
+
+.main-my-index .user .info {
+	background-color: #CCBE97;
+	height: 80rpx;
+	width: 100%;
+	opacity: 0.6;
+	border-top-left-radius: 20rpx;
+	border-top-right-radius: 20rpx;
+}
+
+.main-my-index .down {
+	padding-left:10rpx;
+	padding-right:10rpx;
+	box-sizing: border-box;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.comm-list.card-menu {
+	margin-bottom:20rpx;
+}
+
+.main-my-index .down .data {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 150rpx;
+	padding: 0rpx 40rpx 0rpx 40rpx;
+	width: 100%;
+	background-color: #fff;
+}
+
+.main-my-index .down .data view { 
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.main-my-index .down .data view .num {
+	font-size: 32rpx;
+	font-weight: bold;
+}
+
+.main-my-index .down .data view .txt {
+	font-size: 28rpx;
+	color: #666;
+}
+
+.main-my-index .comm-list .item.arrow::before,
+.main-my-index .comm-list .item .content .item-icon {
+	color: #0E9489;
+}
+
+.main-my-index .demo-card {
+	box-shadow: var(--ShadowSize) var(--yellowShadow);
+	border: 1rpx solid yellow;
+	color: green !important;
+}
+ .core-menu{
+	 border-top:1rpx solid #fff;
+	 padding-top:30rpx;
+	 width:100%;
+	 display: flex;
+	 flex-direction: column;
+	 justify-content: flex-start;
+	 align-items: flex-start;
+	 margin-bottom:30rpx;
+	 margin-top:30rpx;
+ }
+
+ .core-menu view{
+	height:80rpx;
+	position: relative;
+	width:100%;
+}
+
+.card-arrow{
+	position: absolute;
+	right:0;
+}
+@import "../../user/user_detail_top.wxss";
