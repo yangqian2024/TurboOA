@@ -48,7 +48,7 @@
 - 本项目使用到了一个云函数card_cloud 
 
 
-- 在云函数cloudfunctions文件夹下选择云函数cel_cloud , 右键选择在终端中打开,然后执行 
+- 在云函数cloudfunctions文件夹下选择云函数card_cloud , 右键选择在终端中打开,然后执行 
 - npm install –product
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0814/112336_768a72af_9297599.png "打开内建终端.png")
  ![输入图片说明](https://images.gitee.com/uploads/images/2021/0814/112323_976ec6d9_9297599.png "云函数初始化.png")
@@ -56,7 +56,7 @@
 
  
 
-- 打开cloudfunctions/cel_cloud/comm/ccmini_config.js文件，配置环境ID和后台管理员手机号码
+- 打开cloudfunctions/card_cloud/comm/ccmini_config.js文件，配置环境ID和后台管理员手机号码
 
  ![输入图片说明](https://images.gitee.com/uploads/images/2021/0811/232806_b0477e47_9240987.png "云函数配置.png")
 
