@@ -54,6 +54,6 @@
   	NEWS_PIC_DIR: 'client/news/pic/', //公告通知图片目录 
   	NEWS_MAX_PIC: 8, //公告通知图片上限 
 
-  	CACHE_SETUP: 3600 * 1,
+  	CACHE_SETUP: 3600 * 10,
 
   }

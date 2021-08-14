@@ -20,14 +20,23 @@ class PassportBiz extends BaseCCMiniBiz {
 	 * 获取系统配置
 	 */
 	static async setSetup(that) {
+		
 		let setup = ccminiCacheHelper.get(CACHE_SETUP);
 		if (!setup) {
+			setup = {};
+			setup.ver = CCMINI_SETTING.PROJECT_VER;
+			setup.SETUP_IS_SUB = CCMINI_SETTING.PROJECT_IS_SUB;
+			that.setData({
+				setup
+			}); 
+
 			let opts = {
 				hint: false
 			}
 			setup = await ccminiCloudHelper.callCloudData('home/setup', {}, opts);
 			ccminiCacheHelper.set(CACHE_SETUP, setup, CCMINI_SETTING.CACHE_SETUP);
 		}
+
 		if (setup) {
 			setup.ver = CCMINI_SETTING.PROJECT_VER;
 			setup.SETUP_IS_SUB = CCMINI_SETTING.PROJECT_IS_SUB;
@@ -219,7 +228,7 @@ class PassportBiz extends BaseCCMiniBiz {
 		let opt = {
 			title: title || '登录中',
 		};
-		console.log(3333)
+		 
 		let res = await ccminiCloudHelper.callCloudSumbit('passport/login', {}, opt).then(result => {
 			if (result && ccminiHelper.isDefined(result.data.token) && result.data.token) {
 				// 正常用户
