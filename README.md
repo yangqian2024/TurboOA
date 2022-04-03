@@ -1,12 +1,12 @@
 ## 功能介绍 
     
-音乐厅小程序，包括资讯动态，演出信息，艺术教育，经典剧目，商务合作，关于我们，公益演出预约，商业演出预约，演出日历，我的今日预约，我的预约码，后台预约管理，后台预约核销，后台CMS内容管理等功能模块。是一个数字化的艺术殿堂公共平台，无需下载安装，让您能够随时随地便捷地走近乐团、走近交响乐
+音乐厅影剧院小程序，包括资讯动态，演出信息，艺术教育，经典剧目，商务合作，关于我们，公益演出预约，商业演出预约，演出日历，我的今日预约，我的预约码，后台预约管理，后台预约核销，后台CMS内容管理等功能模块。是一个数字化的艺术殿堂公共平台，无需下载安装，让您能够随时随地便捷地走近乐团、走近交响乐
 
 - 演出预约管理：开始/截止时间/人数均可灵活设置，可以自定义客户预约填写的数据项
 - 演出预约凭证：支持线下到场后校验签到/核销/二维码自助签到等多种方式
 - 详尽的演出预约数据：支持预约名单数据导出Excel，打印
+ ![image](https://user-images.githubusercontent.com/89080542/161452976-583c9cc5-94af-4c2b-9deb-685e6d040174.png)
 
-![输入图片说明](demo/%E4%BA%8C%E7%BB%B4%E7%A0%81.png)
  
 
 ## 技术运用
@@ -21,14 +21,14 @@
 ## 作者
 - 如有疑问，欢迎骚扰联系我鸭：开发交流，技术分享，问题答疑，功能建议收集，版本更新通知，安装部署协助，小程序开发定制等。
 - 俺的微信:
- 
- ![输入图片说明](demo/author-base.png)
+  
+![image](https://user-images.githubusercontent.com/89080542/161452980-6039ac86-9adb-448f-8ddd-b2b12be49361.png)
 
 
 
-## 演示
- ![输入图片说明](demo/%E4%BA%8C%E7%BB%B4%E7%A0%81.png)
- 
+## 演示 
+ ![image](https://user-images.githubusercontent.com/89080542/161452977-142f58f6-ea26-426c-93b3-0b772b2a4ee1.png)
+
  
 
 ## 安装
@@ -38,32 +38,48 @@
 
 
 
-## 截图
-![输入图片说明](demo/1%E9%A6%96%E9%A1%B5.png)
+## 截图  
 
-![输入图片说明](demo/2%E8%B5%84%E8%AE%AF%E5%8A%A8%E6%80%81.png)
-![输入图片说明](demo/3%E6%BC%94%E5%87%BA%E4%BF%A1%E6%81%AF.png)
- ![输入图片说明](demo/4%E8%89%BA%E6%9C%AF%E6%95%99%E8%82%B2.png)
-![输入图片说明](demo/5%E7%BB%8F%E5%85%B8%E6%9B%B2%E7%9B%AE.png)
-![输入图片说明](demo/6%E5%95%86%E5%8A%A1%E5%90%88%E4%BD%9C.png)
-![输入图片说明](demo/7%E5%85%B3%E4%BA%8E%E6%88%91%E4%BB%AC.png)
-![输入图片说明](demo/8%E5%85%AC%E7%9B%8A%E6%BC%94%E5%87%BA%E9%A2%84%E7%BA%A6.png)
-![输入图片说明](demo/9%E5%95%86%E6%BC%94%E9%A2%84%E7%BA%A6.png)
-![输入图片说明](demo/10%E6%BC%94%E5%87%BA%E6%97%A5%E5%8E%86.png) 
-![输入图片说明](demo/12%E6%AC%A2%E8%BF%8E%E5%9B%9E%E6%9D%A5.png)
-![输入图片说明](demo/13%E9%A2%84%E7%BA%A6%E8%AF%A6%E6%83%85.png)
-![输入图片说明](demo/14%E9%A9%AC%E4%B8%8A%E9%A2%84%E7%BA%A6.png)
+![image](https://user-images.githubusercontent.com/89080542/161452982-80fe7530-d0f8-41dc-be98-d9e481359c3c.png)
 
-## 后台管理系统截图 
- ![输入图片说明](demo/15%E5%90%8E%E5%8F%B0-%E9%A6%96%E9%A1%B5.png)
-![输入图片说明](demo/16%E5%90%8E%E5%8F%B0-%E5%86%85%E5%AE%B9%E6%A8%A1%E5%9D%97.png)
-![输入图片说明](demo/17%E5%90%8E%E5%8F%B0-%E5%86%85%E5%AE%B9%E6%B7%BB%E5%8A%A0.png)
+![image](https://user-images.githubusercontent.com/89080542/161452983-2c11f8c5-681d-4701-97c1-9c1b180869f3.png)
+![image](https://user-images.githubusercontent.com/89080542/161452985-28ee38b6-5ba7-434b-b1d3-094cfcd3a58e.png)
 
-![输入图片说明](demo/18%E5%90%8E%E5%8F%B0-%E9%A2%84%E7%BA%A6%E7%AE%A1%E7%90%86.png)
-![输入图片说明](demo/19%E5%90%8E%E5%8F%B0-%E9%A2%84%E7%BA%A6%E6%B7%BB%E5%8A%A0.png)
-![输入图片说明](demo/20%E5%90%8E%E5%8F%B0-%E9%A2%84%E7%BA%A6%E6%97%B6%E6%AE%B5%E8%AE%BE%E7%BD%AE.png)
-![输入图片说明](demo/21%E5%90%8E%E5%8F%B0-%E9%A2%84%E7%BA%A6%E8%8F%9C%E5%8D%95.png)
-![输入图片说明](demo/22%E5%90%8E%E5%8F%B0-%E9%A2%84%E7%BA%A6%E5%90%8D%E5%8D%95%E5%AF%BC%E5%87%BA.png)
-![输入图片说明](demo/23%E5%90%8E%E5%8F%B0-%E9%A2%84%E7%BA%A6%E5%90%8D%E5%8D%95.png)
-![输入图片说明](demo/24%E5%90%8E%E5%8F%B0-%E9%A2%84%E7%BA%A6%E5%90%8D%E5%8D%95%E7%AE%A1%E7%90%86.png)
-![输入图片说明](demo/25%E5%90%8E%E5%8F%B0-%E9%A2%84%E7%BA%A6%E6%A0%B8%E9%94%80.png)
+![image](https://user-images.githubusercontent.com/89080542/161452989-2b61674d-40c7-4e87-8d42-736fe6288327.png)
+
+![image](https://user-images.githubusercontent.com/89080542/161452990-9e139650-6068-4168-b219-5642ee5eca9b.png)
+![image](https://user-images.githubusercontent.com/89080542/161452991-033d5dbc-fdf7-4cea-95b1-59e7315df8b4.png)
+![image](https://user-images.githubusercontent.com/89080542/161452993-79d39f1e-6eb9-4505-8caa-a942246f84b7.png)
+![image](https://user-images.githubusercontent.com/89080542/161452994-96bf4a26-e71f-4868-ac74-f5f5c52db941.png)
+![image](https://user-images.githubusercontent.com/89080542/161452997-04ce95f3-f449-493f-9fbf-1a709538a9f4.png)
+
+![image](https://user-images.githubusercontent.com/89080542/161453000-91d14045-cac4-421c-a160-bbef0b238682.png)
+![image](https://user-images.githubusercontent.com/89080542/161453002-3012aa1c-2d5e-425e-8baa-7d746ff115eb.png)
+
+![image](https://user-images.githubusercontent.com/89080542/161453006-d2cf178e-cb51-41f4-a887-3d5d6ad0bae2.png)
+![image](https://user-images.githubusercontent.com/89080542/161453011-582b1630-cf79-49e9-b755-a13b7e6ac176.png)
+
+
+
+
+
+## 后台管理系统截图  
+![image](https://user-images.githubusercontent.com/89080542/161453015-d9513968-d3a4-420c-8941-9b5a3f73d484.png)
+![image](https://user-images.githubusercontent.com/89080542/161453020-d4420e02-fdc7-47e9-bbc2-352b4e7b523f.png)
+![image](https://user-images.githubusercontent.com/89080542/161453021-9406a3f7-26b8-4f17-8ba5-b4f26c288ec7.png)
+![image](https://user-images.githubusercontent.com/89080542/161453024-df280b02-1ed9-4969-93cc-09660c128379.png)
+![image](https://user-images.githubusercontent.com/89080542/161453025-63b98100-c1ca-4d30-8d29-bec4bda5fe0d.png)
+
+![image](https://user-images.githubusercontent.com/89080542/161453028-7890cfd8-94e9-4f43-9b1e-9883fdadb35f.png)
+![image](https://user-images.githubusercontent.com/89080542/161453032-510cc0e8-2eae-4122-8403-c6621224a4e2.png)
+
+![image](https://user-images.githubusercontent.com/89080542/161453034-d1955d1d-a036-41c0-9361-5ac13a0412d0.png)
+![image](https://user-images.githubusercontent.com/89080542/161453037-b9bafa24-eea8-455c-8444-5ca29baab3d9.png)
+
+![image](https://user-images.githubusercontent.com/89080542/161453039-5a068bf1-1754-4e91-8481-c6e9c98b464c.png)
+
+![image](https://user-images.githubusercontent.com/89080542/161453041-031b2ea7-812e-495e-9b37-0d016f60dc15.png)
+
+
+
+
