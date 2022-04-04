@@ -49,7 +49,7 @@
 		"backgroundColor": "#f1f1f1",
 		"backgroundTextStyle": "dark",
 		"navigationBarBackgroundColor": "#163959",
-		"navigationBarTitleText": "停车场预约小程序",
+		"navigationBarTitleText": "音乐厅预约小程序",
 		"navigationBarTextStyle": "white"
 	},
 	"tabBar": {
