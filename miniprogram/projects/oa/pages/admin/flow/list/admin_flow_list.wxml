@@ -1,0 +1,68 @@
+<block wx:if="{{isAdmin&&isLoad}}">
+	<cmpt-comm-list pulldownType="{{['modal','modal']}}" source='admin' type="admin-flow-list" search="{{search||''}}" _menus="{{sortMenus}}" _items="{{sortItems}}" route="admin/flow_list" sortMenusDefaultIndex="0" topBottom="50" placeholder="搜索申请人，审批单号" bind:list="bindCommListCmpt">
+
+		<view slot="searchEnd">
+			<button bindtap="url" data-url="../export/admin_flow_export" class="btn mid radius bg-admin text-white margin-right-s"><text class="icon-down margin-right-xxs"></text>导出申请记录</button>
+		</view>
+		<!-- List Begin -->
+		<view class="admin-comm-list">
+			<view wx:if="{{dataList && dataList.total }}" class="load text-grey">共有{{dataList.total}}条符合条件记录</view>
+
+			<view class="item" wx:for="{{dataList.list}}" wx:key="key">
+				<view class="no">#{{item.FLOW_NO}}</view>
+				<view class="header">
+					<view class="left text-cut"><text class="icon-moreandroid text-grey text-normal"></text>{{item.FLOW_CATE_NAME}}
+					</view>
+					<view class="right">
+						<block wx:if="{{item.FLOW_STATUS==1}}">
+							<text class="mark text-blue light"><text class="icon-title"></text>待{{item.FLOW_DEPTS[item.FLOW_TO_STEP-1]}}审批</text>
+						</block>
+						<text wx:elif="{{item.FLOW_STATUS==8}}" class="mark text-orange light">已驳回</text>
+						<text wx:elif="{{item.FLOW_STATUS==9}}" class="mark text-green light">审批完成</text>
+					</view>
+				</view>
+
+				<view class="info">
+					<view class="info-item">
+						<view class="title">申请人</view>
+						<view class="mao">：</view>
+						<view class="content">[{{item.FLOW_USER_DEPT}}] - {{item.FLOW_OBJ.person}}</view>
+					</view>
+					<view class="info-item">
+						<view class="title">审批流程</view>
+						<view class="mao">：</view>
+						<view class="content text-blue"> {{item.FLOW_DEPTS}} </view>
+					</view>
+
+					<view class="info-item" wx:if="{{item.FLOW_NOW_STEP>0}}">
+						<view class="title">{{item.FLOW_STATUS==1?'前序审批':'当前审批'}}</view>
+						<view class="mao">：</view>
+						<view class="content">[{{item.FLOW_NOW_NATIVE_DEPT}}] - {{item.FLOW_NOW_USER_NAME}}</view>
+					</view>
+					<view class="info-item">
+						<view class="title">申请时间</view>
+						<view class="mao">：</view>
+						<view class="content">{{item.FLOW_ADD_TIME}}</view>
+					</view>
+
+					<view class="oprt">
+						<view bindtap="url" data-url="../../../flow/detail/flow_detail?flag=admin&id={{item._id}}" class="btn round"><text class="icon-attention margin-right-xxs"></text>详情</view>
+
+						<view bindtap="bindDelTap" data-id="{{item._id}}" class="btn  text-grey"><text class="icon-delete"></text>删除</view>
+
+					</view>
+				</view>
+			</view>
+
+		</view>
+		<!-- List END -->
+
+		<!--load begin-->
+		<import src="../../../../../../tpls/public/list_load_tpl.wxml" />
+		<template is="listLoadTpl" data="{{dataList,skin:'text-grey'}}" />
+		<!--load end-->
+
+
+	</cmpt-comm-list>
+
+</block>

@@ -1,0 +1,57 @@
+<block wx:if="{{isLogin&&isLoad}}">
+	<cmpt-comm-list pulldownType="{{['modal','modal']}}" _params="{{_params}}" type="my-flow-checked" search="{{search}}" _menus="{{sortMenus}}" _items="{{sortItems}}" route="flow/my_checked" isTotalMenu="{{true}}" sortMenusDefaultIndex="{{0}}" topBottom="120" placeholder="搜索申请人，审批单号" bind:list="bindCommListCmpt">
+
+		<view class="myDept" slot="searchEnd">
+			{{dept}}
+		</view>
+
+		<!-- List Begin -->
+		<view class="list padding-project">
+			<view class="item {{item.FLOW_STATUS==1&&'blue'}} {{item.FLOW_STATUS==8&&'orange'}} {{item.FLOW_STATUS==9&&'green'}}  card-project shadow-project" wx:for="{{dataList.list}}" wx:key="index">
+				<block wx:if="{{item.FLOW_STATUS==1}}">
+					<view  class="mark bg-blue light"><text class="icon-title"></text>待{{item.FLOW_DEPTS[item.FLOW_TO_STEP-1]}}审批</view> 
+				</block>
+				<view wx:elif="{{item.FLOW_STATUS==8}}" class="mark bg-orange light"><text class="icon-close"></text>已驳回</view> 
+				<view wx:elif="{{item.FLOW_STATUS==9}}" class="mark bg-green light"><text class="icon-check"></text>审批完成</view>
+
+				<view class="line0">
+					{{item.FLOW_CATE_NAME}} <text class="bg-grey light">#{{item.FLOW_NO}}</text>
+				</view>
+
+				<view class="line1">
+					<view class="left">申请人：</view>
+					<view class="right">{{item.FLOW_USER_DEPT}} - {{item.FLOW_OBJ.person}}</view>
+				</view>
+				<view class="line1">
+					<view class="left">申请时间：</view>
+					<view class="right">{{item.FLOW_ADD_TIME}}</view>
+				</view>  
+				<view class="line1" wx:if="{{item.FLOW_NOW_STEP>0}}">
+					<view class="left">{{item.FLOW_STATUS==1?'前序审批':'当前审批'}}：</view>
+					<view class="right">{{item.FLOW_NOW_NATIVE_DEPT}} - {{item.FLOW_NOW_USER_NAME}}</view>
+				</view>  
+
+				<view class="oprt">
+					<view bindtap="url" data-url="../detail/flow_detail?id={{item._id}}" wx:if="{{item.FLOW_NOW_USER_ID!=nowUserId}}">查看详情</view>
+					<view bindtap="url" data-url="../step/flow_step?id={{item._id}}&flag=edit" wx:else>详情<text class="margin-left-xxs margin-right-xxs">/</text>修改审批意见</view>
+ 
+
+				</view>
+
+			</view>
+
+			<!--load begin-->
+			<import src="../../../../../tpls/public/list_load_tpl.wxml" />
+			<template is="listLoadTpl" data="{{skin:'load-project',dataList}}" />
+			<!--load end-->
+
+		</view>
+		<!-- List END -->
+
+	</cmpt-comm-list>
+
+
+
+
+
+</block>

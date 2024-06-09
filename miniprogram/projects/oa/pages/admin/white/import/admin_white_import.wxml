@@ -1,0 +1,31 @@
+<view class="main-admin" wx:if="{{isAdmin}}">
+	<form bindsubmit="bindFormSubmit">
+		<view class="form-box shadow">
+			<view class="hint-desc text-bold"><text class="icon-info margin-right-xxs"></text>注意事项</view>
+			<view class="hint-desc">1. 请选择后缀名为xlsx的Excel文件导入</view>
+			<view class="hint-desc">2. 每次导入数据不超过10000条</view>
+
+			<view class="hint-desc text-bold"><text class="icon-form margin-right-xxs"></text>数据格式：</view>
+			<view class="hint-desc">
+				手机 | 姓名 |部门
+			</view>
+			<view class="hint-line">
+				13011111111 | 刘敏 | 研发部
+			</view>
+			<view class="hint-line">
+				13011111112 | 张明 | 财务部
+			</view>
+			<view class="hint-line">
+				13011111113 | 吴昊 | 人事部
+			</view>
+			<view style="height: 100rpx;"></view>
+		</view>
+
+
+		<view class="padding-bottom flex  flex-direction  ">
+			<button formType="submit" class="btn bg-blue margin-top-s text-bold large bg-{{skin}}">导入数据文件</button>
+		</view>
+
+
+	</form>
+</view>

@@ -1,0 +1,47 @@
+<view class="main">
+	<view class="top">
+		<image mode="widthFix" src="../../../images/home.jpg" class="loading" />
+	</view>
+
+	<view class="box">
+		<view class="inner">
+
+			<view class="item" bindtap="url" data-type="relaunch" data-url="../../news/index/news_index">
+				<image src="../../../images/home/news.png" /> 
+				<view class="line"> 
+					<text class="title">通知公告</text>
+				</view>
+			</view>
+
+			<view class="item" bindtap="url" data-type="relaunch" data-url="../../flow/my_list/flow_my_list">
+				<image src="../../../images/home/add.png" /> 
+				<view class="line"> 
+					<text wx:if="{{stat&&stat.myCnt}}" class="num shadow bg-blue">{{stat.myCnt}}</text>
+					<text class="title">我的申请</text>
+				</view>
+			</view>
+
+			<view class="item" bindtap="url" data-url="../../flow/my_checking/flow_my_checking">
+				<image src="../../../images/home/wait.png" />
+				<view class="line">
+					<text wx:if="{{stat&&stat.checkingCnt}}" class="num shadow">{{stat.checkingCnt}}</text>
+					<text class="title">待我审批</text>
+				</view>
+			</view>
+
+			<view class="item" bindtap="url" data-url="../../flow/my_checked/flow_my_checked">
+				<image src="../../../images/home/done.png" /> 
+				<view class="line"> 
+					<text class="title">我已审批</text>
+				</view>
+			</view>
+		</view>
+
+	</view>
+
+</view>
+
+<block wx:if="{{skin.IS_SUB}}">
+	<import src="../../tpls/menu_tpl.wxml" />
+	<template is="menuTpl" data="{{curMenu:'default_index',returnHome:false}}" />
+</block>

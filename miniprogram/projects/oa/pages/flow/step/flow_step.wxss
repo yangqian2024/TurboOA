@@ -1,0 +1,19 @@
+@import "../detail/flow_detail.wxss";
+
+
+.form-box {
+	position: relative;
+	padding-top: 18rpx;
+	overflow: hidden;
+}
+
+.form-box .mark {
+	top: 0rpx;
+	left: 0rpx;
+	position: absolute;
+	z-index: 9; 
+	padding: 4rpx 20rpx;
+	font-size: 22rpx;
+	border-top-left-radius: 10rpx;
+	border-bottom-right-radius: inherit;
+}

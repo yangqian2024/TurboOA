@@ -1,0 +1,50 @@
+<view class="form-box shadow">
+	<view class="form-group">
+		<view class="title must">姓名</view>
+	</view>
+	<view class="form-group">
+		<input placeholder="请输入姓名" placeholder-class="phc" model:value="{{formName}}" focus="{{formNameFocus}}" maxlength="11"></input>
+	</view>
+	<view wx:if="{{formNameFocus}}" class="hint-desc error">{{formNameFocus}}</view>
+
+
+
+	<view class="form-group">
+		<view class="title must">电话号码</view>
+	</view>
+
+	<view class="form-group">
+		<input placeholder="请输入电话号码" placeholder-class="phc" model:value="{{formTitle}}" focus="{{formTitleFocus}}" maxlength="11"></input>
+	</view>
+	<view wx:if="{{formTitleFocus}}" class="hint-desc error">{{formTitleFocus}}</view>
+
+	<view class="form-group" id="formDept">
+			<view class="title must">所属部门</view>
+			<cmpt-picker mark="dept" style="flex:1" model:item="{{formDept}}" sourceDataStr="{{deptOptions}}" />
+		</view>
+		<view wx:if="{{formDeptFocus}}" class="hint-desc error">{{formDeptFocus}}</view>
+
+
+	<view wx:if="{{cateIdOptions.length>1}}" class="form-group arrow" id="formCateId">
+		<view class="title must">分类</view>
+		<cmpt-picker id="cate-picker" sourceData="{{cateIdOptions}}" bind:select="url" data-type="picker" data-item="formCateId" item="{{formCateId}}"> </cmpt-picker>
+	</view>
+	<view wx:if="{{formCateIdFocus}}" class="hint-desc error">{{formCateIdFocus}}</view>
+
+	<!--
+	<view class="form-group">
+		<view class="title must">排序号<text class="text-grey text-normal margin-left-xs">(小的先显示)</text></view>
+		<input placeholder="排序号，小的先显示" type="number" placeholder-class="phc" model:value="{{formOrder}}" focus="{{formOrderFocus}}" maxlength="4"></input>
+	</view>
+	<view wx:if="{{formOrderFocus}}" class="hint-desc error">{{formOrderFocus}}</view> -->
+
+
+</view>
+
+<view class="form-box shadow margin-top-xs">
+	<cmpt-form-show id="cmpt-form" mark="cmpt-form" source="admin" isCacheMatch="{{false}}" fields="{{fields}}" forms="{{formForms}}" isDefMatch="{{id?false:true}}">
+	</cmpt-form-show>
+</view>
+
+
+<button bindtap="bindFormSubmit" class="btn-admin margin-top-xs">提交</button>

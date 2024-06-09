@@ -1,0 +1,11 @@
+<view class="main">
+	<view class="list">
+		<view bind:tap="url" data-url="../add/flow_add?cateId={{item.FLOW_CATE_ID}}" class="item shadow" wx:for="{{list}}" wx:key="k">{{item.FLOW_NAME}}
+		</view>
+	</view>
+</view>
+
+<block wx:if="{{skin.IS_SUB}}">
+	<import src="../../tpls/menu_tpl.wxml" />
+	<template is="menuTpl" data="{{curMenu:'flow_index',returnHome:false}}" />
+</block>

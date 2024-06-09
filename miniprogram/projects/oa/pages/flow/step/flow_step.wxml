@@ -1,0 +1,27 @@
+<view wx:if="{{isLoad===null}}" class="margin-top load notexist text-l load-project"></view>
+<view wx:if="{{isLoad===false}}" class="margin-top load loading text-l load-project"></view>
+
+<block wx:if="{{isLoad&&isLogin}}">
+	<view class="main padding-project">  
+
+		<include src="../detail/flow_info_tpl.wxml" />
+
+		<block wx:if="{{flow.isAuthEdit}}">
+			<!-- form content begin -->
+			<view class="form-box card-project shadow-project margin-top">
+				<view class="mark bg-blue light">{{nowDept}}</view>
+				<cmpt-form-show wx:if="{{fields}}" isConfirm="{{false}}" isCacheMatch="{{false}}" id="flow-form-show" mark="flow-form-show" forms="{{flow.stepForms||[]}}" fields="{{fields}}" bind:submit="bindSubmitCmpt" />
+			</view>
+			<!-- form content end -->
+
+
+			<view class="oprt">
+				<view bindtap="bindCheckTap" data-state="8" class="bg-orange"><text class="icon-close"></text>驳回</view>
+
+				<view bindtap="bindCheckTap" data-state="1" class="bg-green"><text class="icon-check"></text>同意</view>
+			</view>
+		</block>
+
+	</view>
+	<view style="height: 100rpx;"></view>
+</block>

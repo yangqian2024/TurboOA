@@ -1,0 +1,16 @@
+@import '../../../../../../style/public/admin.wxss';
+@import '../../../../../../style/project/admin_list_style.wxss';
+
+page {
+	background-color: #f8f8f8;
+}
+
+.admin-comm-list .item .info .oprt {
+	width: 100%;
+	padding: 0 100rpx;
+	justify-content: space-evenly;
+}
+
+.admin-comm-list .item .header .right .mark {
+	font-size: 24rpx;
+}

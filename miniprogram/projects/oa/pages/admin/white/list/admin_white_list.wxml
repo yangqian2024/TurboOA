@@ -1,0 +1,44 @@
+<block wx:if="{{isAdmin&&isLoad}}">
+	<cmpt-comm-list source='admin' type="admin-white-list" search="{{search||''}}" _menus="{{sortMenus}}" _items="{{sortItems}}" route="admin/white_list" pulldownType="{{['modal','modal','modal']}}" sortMenusDefaultIndex="0" topBottom="50" placeholder="搜索" bind:list="bindCommListCmpt">
+
+		<view slot="searchEnd">
+			<button bindtap="url" data-url="../add/admin_white_add" class="btn radius bg-admin text-white margin-right-s">添加{{WHITE_NAME}}</button>
+			<button bindtap="url" data-url="../import/admin_white_import" class="btn radius bg-admin text-white margin-right-s"><text class="icon-add margin-right-xxs"></text>批量导入</button>
+		</view>
+		<!-- List Begin -->
+		<view class="admin-comm-list">
+			<view wx:if="{{dataList && dataList.total }}" class="load text-grey">共有{{dataList.total}}条符合条件记录</view>
+
+			<view class="table margin-bottom sticky1" style="width:100%">
+				<!-- 表格体 start -->
+				<view class="thead thead-border"> 
+					<view class="td" style="width:180rpx;">姓名</view>
+					<view class="td" style="width:200rpx;">手机</view> 
+					<view class="td" style="width:200rpx;">部门</view> 
+					<view class="td full">操作</view>
+				</view>
+
+				<view class="tbody">
+					<view class="tr border" wx:for="{{dataList.list}}" wx:key="key">
+						<view bind:tap="url" data-url="{{item.WHITE_NAME}}" data-type="copy" class="td" style="width:180rpx;word-break: break-all;">{{item.WHITE_NAME}}</view> 
+						<view bind:tap="url" data-url="{{item.WHITE_TITLE}}" data-type="copy" class="td" style="width:200rpx;word-break: break-all;">{{item.WHITE_TITLE}}</view>  
+						<view bind:tap="url" data-url="{{item.WHITE_DEPT}}" data-type="copy" class="td" style="width:200rpx;word-break: break-all;">{{item.WHITE_DEPT}}</view>  
+
+						<view class="td full">
+							<text bindtap="bindDelTap" data-id="{{item._id}}" class="icon-delete text-red">删除</text> 
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<!-- List END -->
+
+		<!--load begin-->
+		<import src="../../../../../../tpls/public/list_load_tpl.wxml" />
+		<template is="listLoadTpl" data="{{dataList,skin:'text-grey'}}" />
+		<!--load end-->
+
+
+	</cmpt-comm-list>
+
+</block>

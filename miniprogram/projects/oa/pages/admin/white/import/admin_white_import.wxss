@@ -1,0 +1,20 @@
+@import '../../../../../../style/public/admin.wxss';
+
+
+.main-admin {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 30rpx 20rpx;
+}
+
+.hint-desc {
+	line-height: 70rpx;
+	color: #333 !important;
+}
+
+.hint-line {
+	color: #999 !important;
+	font-size: 24rpx;
+	padding: 2rpx 10rpx;
+	border: 2rpx solid #ccc; 
+} 

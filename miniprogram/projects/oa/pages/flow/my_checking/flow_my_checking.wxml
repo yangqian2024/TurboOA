@@ -1,0 +1,50 @@
+<block wx:if="{{isLogin&&isLoad}}">
+	<cmpt-comm-list pulldownType="{{['modal','modal']}}" _params="{{_params}}" type="my-flow-checking" search="{{search}}" _menus="{{sortMenus}}" _items="{{sortItems}}" route="flow/my_checking" isTotalMenu="{{true}}" sortMenusDefaultIndex="{{0}}" topBottom="120" placeholder="搜索申请人，审批单号" bind:list="bindCommListCmpt">
+
+		<view class="myDept" slot="searchEnd">
+			{{dept}}
+		</view>
+
+		<!-- List Begin -->
+		<view class="list padding-project">
+			<view bindtap="url" data-url="../step/flow_step?flag=add&id={{item._id}}" class="item  card-project shadow-project" wx:for="{{dataList.list}}" wx:key="index">
+				<view class="mark bg-blue light"><text class="icon-title"></text>待我审批</view>
+				 
+				<view class="line0">
+					{{item.FLOW_CATE_NAME}} <text class="bg-grey light">#{{item.FLOW_NO}}</text>
+				</view>
+
+				<view class="line1">
+					<view class="left">申请人：</view>
+					<view class="right">{{item.FLOW_USER_DEPT}} - {{item.FLOW_OBJ.person}}</view>
+				</view>
+				<view class="line1">
+					<view class="left">申请时间：</view>
+					<view class="right">{{item.FLOW_ADD_TIME}}</view>
+				</view>  
+				<view class="line1" wx:if="{{item.FLOW_NOW_STEP>0}}">
+					<view class="left">前序审批：</view>
+					<view class="right">{{item.FLOW_NOW_NATIVE_DEPT}} - {{item.FLOW_NOW_USER_NAME}}</view>
+				</view>  
+
+				<view class="oprt">
+					<view>详情<text class="margin-left-xxs margin-right-xxs">/</text>去审批</view>
+				</view>
+
+			</view>
+
+			<!--load begin-->
+			<import src="../../../../../tpls/public/list_load_tpl.wxml" />
+			<template is="listLoadTpl" data="{{skin:'load-project',dataList}}" />
+			<!--load end-->
+
+		</view>
+		<!-- List END -->
+
+	</cmpt-comm-list>
+
+
+
+
+
+</block>

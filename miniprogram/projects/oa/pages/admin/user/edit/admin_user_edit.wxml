@@ -1,0 +1,39 @@
+<view wx:if="{{isLoad===null}}" class="margin-top load notexist text-l load-project"></view>
+<view wx:if="{{isLoad===false}}" class="margin-top load loading text-l load-project"></view>
+
+<view wx:if="{{isLoad}}" class="main-admin padding-project">
+	<view class="form-box shadow-project card-project">
+
+		<view class="form-group">
+			<view class="title must">姓名</view>
+			<input placeholder="填写您的姓名" placeholder-class="phc" model:value="{{formName}}" maxlength="30"></input>
+		</view>
+		<view wx:if="{{formNameFocus}}" class="hint-desc error">{{formNameFocus}}</view>
+
+		<view class="form-group">
+			<view class="title must">手机</view>
+			<input placeholder="填写您的手机号码" placeholder-class="phc" model:value="{{formMobile}}" maxlength="11"></input>
+		</view>
+		<view wx:if="{{formMobileFocus}}" class="hint-desc error">{{formMobileFocus}}</view>
+
+		<view class="form-group" id="formDept">
+			<view class="title must">所属部门</view>
+			<cmpt-picker mark="dept" style="flex:1" model:item="{{formDept}}" sourceDataStr="{{deptOptions}}" />
+		</view>
+		<view wx:if="{{formDeptFocus}}" class="hint-desc error">{{formDeptFocus}}</view>
+
+		<view class="form-group" id="formAuth">
+			<view class="title must">是否为审批人员</view>
+			<cmpt-picker mark="auth" style="flex:1" model:item="{{formAuth}}" sourceDataStr="0=否,1=是" />
+		</view>
+		<view wx:if="{{formAuthFocus}}" class="hint-desc error">{{formAuthFocus}}</view>
+
+	</view>
+
+	<view class="form-box shadow-project card-project margin-top-xs">
+		<cmpt-form-show id="cmpt-form" mark="cmpt-form" isCacheMatch="{{false}}" fields="{{fields}}" forms="{{formForms}}" isDefMatch="{{isEdit?false:true}}">
+		</cmpt-form-show>
+	</view>
+
+	<button bindtap="bindSubmitTap" class="btn-admin margin-top">修改资料</button>
+</view>

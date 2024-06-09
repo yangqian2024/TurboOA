@@ -1,0 +1,81 @@
+@import "../../../style/skin.wxss";
+
+page {
+	background-color: #fff !important;
+}
+
+.main {
+	padding: 0;
+	background-color: #fff !important;
+}
+
+.top {
+	width: 100%;
+}
+
+.top image {
+	width: 100%;
+}
+
+.box {
+	width: 100%;
+	padding: 80rpx 70rpx 20rpx;
+	border-top-right-radius: 30rpx;
+	border-top-left-radius: 30rpx;
+	margin-top: -150rpx;
+	position: relative;
+	background-color: #fff;
+}
+
+.box .inner {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.box .inner .item {
+	width: calc((100% - 70rpx) / 2);
+	margin-bottom: 70rpx;
+	height: 220rpx;
+	border-radius: 10rpx;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	box-shadow: 5rpx 5rpx 18rpx 1rpx rgba(65, 81, 224, 0.2);
+	overflow: hidden;
+}
+
+.box .inner .item image {
+	width: 110rpx;
+	height: 180rpx;
+	margin-right: 10rpx;
+}
+
+.box .inner .item:nth-child(2n+1) {
+	margin-right: 70rpx;
+}
+
+.box .inner .item .line {
+	margin-left: 0rpx;
+	position: relative;
+}
+
+.box .inner .item .line .title {
+	font-size: 28rpx;
+	font-weight: bold;
+}
+
+.box .inner .item .line .num {
+	position: absolute;
+	top: -16rpx;
+	right: -20rpx;
+	background-color: var(--orange);
+	border-radius: 50%;
+	color: #fff;
+	padding: 4rpx;
+	min-width: 26rpx;
+	min-height: 26rpx;
+	font-size: 22rpx;
+	opacity: .8;
+	text-align: center;
+}

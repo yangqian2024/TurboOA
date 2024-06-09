@@ -1,0 +1,62 @@
+@import "../../../style/skin.wxss";
+
+page {
+	background-image: linear-gradient(180deg, var(--projectColor), #fff, #fff);
+	background-repeat: no-repeat;
+}
+
+.list {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 60rpx 60rpx 30rpx;
+}
+
+.list .item {
+	width: calc((100% - 30rpx) / 2);
+	padding: 70rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	font-size: 30rpx;
+	background-color: #fff;
+	margin-bottom: 30rpx;
+	border-top-right-radius: 2rpx;
+	position: relative; 
+	border-radius: 6rpx;
+	border-top-right-radius: 30rpx;
+	border-bottom-left-radius: 30rpx;
+} 
+
+.list .item:nth-child(2n+1) {
+	margin-right: 30rpx;
+}
+
+.list .item:nth-child(7n+1) {
+	background-color: var(--red);
+}
+
+.list .item:nth-child(7n+2) {
+	background-color: var(--blue);
+}
+
+.list .item:nth-child(7n+3) {
+	background-color: var(--cyan);
+}
+
+.list .item:nth-child(7n+4) {
+	background-color: var(--pink);
+}
+
+.list .item:nth-child(7n+5) {
+	background-color: var(--orange);
+}
+
+.list .item:nth-child(7n+6) {
+	background-color: var(--purple);
+}
+
+.list .item:nth-child(7n+7) {
+	background-color: var(--green);
+}

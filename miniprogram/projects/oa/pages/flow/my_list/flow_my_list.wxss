@@ -1,0 +1,107 @@
+@import "../../../style/skin.wxss";
+
+.myDept {
+	padding:10rpx;
+	margin-right: 20rpx;
+	font-size: 32rpx;
+	color:#ccc; 
+}
+
+.list {
+	width: 100%;
+	padding: 10rpx 10rpx;
+}
+
+.list .item {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	margin-bottom: 30rpx;
+	padding: 14rpx 20rpx 30rpx;
+	position: relative;
+	overflow: hidden;
+	border-left: 14rpx solid #fff;
+}
+
+.list .item.blue {
+	border-left-color: var(--blue);
+}
+
+.list .item.green {
+	border-left-color: var(--green);
+}
+
+.list .item.orange {
+	border-left-color: var(--orange);
+}
+
+.list .item .mark {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 24rpx;
+	padding: 8rpx 20rpx;
+	border-top-right-radius: inherit;
+	border-bottom-left-radius: 10rpx;
+	z-index: 9;
+}
+
+.list .item .line0 {
+	width: 100%;
+	display: flex;
+	padding: 4rpx 0rpx;
+	align-items: baseline;
+	font-size: 28rpx;
+	color: #333;
+	margin-bottom: 10rpx;
+	font-weight: bold;
+}
+
+.list .item .line0>text {
+	font-size: 22rpx;
+	color: #999;
+	margin-left: 10rpx;
+	font-weight: normal;
+	padding: 2rpx 10rpx;
+	border-radius: 4rpx;
+}
+
+.list .item .line1 {
+	width: 100%;
+	display: flex;
+	padding: 4rpx 0rpx;
+	align-items: baseline;
+	font-size: 24rpx;
+}
+
+.list .item .line1 .left {
+	width: 130rpx;
+	color: #999;
+}
+
+.list .item .line1 .right {
+	flex: 1;
+	color: #777;
+}
+
+.list .item .line2 {
+	font-size: 24rpx;
+	margin-top: 10rpx;
+}
+
+.list .item .oprt {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 20rpx;
+}
+
+.list .item .oprt>view {
+	padding: 10rpx 20rpx;
+	border-radius: 10rpx;
+	margin-left: 20rpx;
+	font-size: 26rpx;
+	background-color: #f2f2f2;
+	color:#666;
+}

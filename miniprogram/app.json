@@ -1,0 +1,104 @@
+{
+	"pages": [
+		"projects/oa/pages/default/index/default_index", 
+				"projects/oa/pages/about/index/about_index",
+				"projects/oa/pages/search/search",
+				"projects/oa/pages/my/index/my_index",
+				"projects/oa/pages/my/reg/my_reg",
+				"projects/oa/pages/my/edit/my_edit",
+				"projects/oa/pages/my/foot/my_foot",
+				"projects/oa/pages/my/fav/my_fav",
+				"projects/oa/pages/news/index/news_index",
+				"projects/oa/pages/news/detail/news_detail",
+				"projects/oa/pages/admin/news/list/admin_news_list",
+				"projects/oa/pages/admin/news/add/admin_news_add",
+				"projects/oa/pages/admin/news/edit/admin_news_edit",
+				"projects/oa/pages/admin/setup/about/admin_setup_about",
+				"projects/oa/pages/admin/setup/about_list/admin_setup_about_list",
+				"projects/oa/pages/admin/setup/qr/admin_setup_qr",
+				"projects/oa/pages/admin/index/home/admin_home",
+				"projects/oa/pages/admin/index/login/admin_login",
+				"projects/oa/pages/admin/content/admin_content",
+				"projects/oa/pages/admin/mgr/log/admin_log_list",
+				"projects/oa/pages/admin/mgr/edit/admin_mgr_edit",
+				"projects/oa/pages/admin/mgr/list/admin_mgr_list",
+				"projects/oa/pages/admin/mgr/add/admin_mgr_add",
+				"projects/oa/pages/admin/mgr/pwd/admin_mgr_pwd",
+				"projects/oa/pages/admin/user/list/admin_user_list",
+				"projects/oa/pages/admin/user/detail/admin_user_detail",
+				"projects/oa/pages/admin/user/edit/admin_user_edit",
+				"projects/oa/pages/admin/user/export/admin_user_export",
+				"projects/oa/pages/admin/white/list/admin_white_list",
+				"projects/oa/pages/admin/white/add/admin_white_add",
+				"projects/oa/pages/admin/white/import/admin_white_import",
+				"projects/oa/pages/flow/add/flow_add",
+				"projects/oa/pages/flow/my_list/flow_my_list",
+				"projects/oa/pages/flow/edit/flow_edit",
+				"projects/oa/pages/flow/detail/flow_detail",
+				"projects/oa/pages/flow/my_checking/flow_my_checking",
+				"projects/oa/pages/flow/my_checked/flow_my_checked",
+				"projects/oa/pages/flow/step/flow_step",
+				"projects/oa/pages/flow/index/flow_index",
+				"projects/oa/pages/admin/flow/list/admin_flow_list",
+				"projects/oa/pages/admin/flow/export/admin_flow_export",
+		"cmpts/public/form/form_set/field/form_set_field",
+		"cmpts/public/form/form_show/content/form_show_content",
+		"pages/test1/test1"
+	],
+	"window": {
+		"backgroundColor": "#f1f1f1",
+		"backgroundTextStyle": "dark",
+		"navigationBarBackgroundColor": "#3388EB",
+		"navigationBarTitleText": "企业审批小程序",
+		"navigationBarTextStyle": "white"
+	},
+	"tabBar": {
+		"custom": false,
+		"backgroundColor": "#FFFFFF",
+		"color": "#999999",
+		"selectedColor": "#3388EB",
+		"list": [
+			{
+				"pagePath": "projects/oa/pages/default/index/default_index",
+				"text": "首页",
+				"iconPath": "/projects/oa/images/tabbar/home.png",
+				"selectedIconPath": "/projects/oa/images/tabbar/home_cur.png"
+			},
+			{
+				"pagePath": "projects/oa/pages/news/index/news_index",
+				"text": "公告",
+				"iconPath": "/projects/oa/images/tabbar/news.png",
+				"selectedIconPath": "/projects/oa/images/tabbar/news_cur.png"
+			},
+			{
+				"pagePath": "projects/oa/pages/flow/index/flow_index",
+				"text": "提交申请",
+				"iconPath": "/projects/oa/images/tabbar/add.png",
+				"selectedIconPath": "/projects/oa/images/tabbar/add_cur.png"
+			},
+			{
+				"pagePath": "projects/oa/pages/flow/my_list/flow_my_list",
+				"text": "我的申请",
+				"iconPath": "/projects/oa/images/tabbar/task.png",
+				"selectedIconPath": "/projects/oa/images/tabbar/task_cur.png"
+			},
+			{
+				"pagePath": "projects/oa/pages/my/index/my_index",
+				"text": "我的",
+				"iconPath": "/projects/oa/images/tabbar/my.png",
+				"selectedIconPath": "/projects/oa/images/tabbar/my_cur.png"
+			}
+		]
+	}, 
+	"permission": {
+		"scope.userLocation": {
+			"desc": "获取你当前位置信息用于小程序位置接口的效果展示"
+		}
+	},
+	"usingComponents": {
+		"cmpt-comm-list": "/cmpts/public/list/comm_list_cmpt",
+		"cmpt-picker": "/cmpts/public/picker/picker_cmpt",
+		"cmpt-modal": "/cmpts/public/modal/modal_cmpt"
+	},
+	"sitemapLocation": "sitemap.json"
+}

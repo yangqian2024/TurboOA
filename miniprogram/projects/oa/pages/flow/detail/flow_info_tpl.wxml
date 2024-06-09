@@ -1,0 +1,100 @@
+<view class="process-box">
+	<view class="item">
+		<view class="txt bg-project">
+			<text>提交</text>
+			<text>申请</text>
+		</view>
+	</view>
+	<view class="arrow icon-right"></view>
+
+	<block wx:for="{{flow.FLOW_DEPTS}}" wx:key="k">
+		<view class="item">
+			<view class="txt {{(index+1)<flow.FLOW_NOW_STEP&&'bg-project'}} {{(index+1)==flow.FLOW_NOW_STEP&&flow.FLOW_STATUS!=8&&'bg-project'}} {{flow.FLOW_TO_STEP==(index+1)&&flow.FLOW_STATUS==1&&'bg-project light'}}  {{flow.FLOW_NOW_STEP==(index+1)&&flow.FLOW_STATUS==9&&'bg-project'}}  {{(flow.FLOW_NOW_STEP==(index+1)&&flow.FLOW_STATUS==8)&&'bg-orange light'}}">
+				<text>{{item}}</text>
+				<text>审批</text>
+			</view>
+			<view wx:if="{{flow.FLOW_TO_STEP==(index+1)&&flow.FLOW_STATUS==1}}" class="status"><text class="icon-triangleupfill"></text></view>
+			<view wx:if="{{flow.FLOW_NOW_STEP==(index+1)&&flow.FLOW_STATUS==8}}" class="status"><text class="icon-roundclose text-orange"></text></view>
+		</view>
+		<view class="arrow icon-right"></view>
+	</block>
+
+
+	<view class="item">
+		<view class="txt {{flow.FLOW_STATUS==9&&'bg-green'}}">完成</view>
+		<view wx:if="{{flow.FLOW_STATUS==9}}" class="status"><text class="icon-check text-bold text-green"></text></view>
+	</view>
+</view>
+
+<view class="info-box shadow-project">
+	<view class="title">申请资料</view>
+	<view class="list">
+		<view class="item">
+			<view class="left text-project">审批单号</view>
+			<view class="right text-project">#{{flow.FLOW_NO}}</view>
+		</view>
+
+		<view class="item">
+			<view class="left">申请时间</view>
+			<view class="right">{{flow.FLOW_ADD_TIME}}</view>
+		</view>
+
+		<view class="item {{item.type=='image'&&'img'}}" wx:for="{{flow.FLOW_FORMS}}" wx:key="key">
+			<view class="left">{{item.title}}</view>
+			<view class="right">
+				<block wx:if="{{item.type=='image'}}">
+					<image wx:for="{{item.val}}" wx:key="kimg" wx:for-item="itm" bind:tap="url" data-url="{{itm}}" data-type="image" class="loading img" mode="aspectFill" lazy-load="{{true}}" src="{{itm}}" />
+				</block>
+				<block wx:elif="{{item.type=='file'}}">
+					<view class="file-box">
+						<view bind:tap="bindOpenFileTap" data-idx="{{fileidx}}" wx:for="{{item.val}}" wx:key="kfile" wx:for-item="itm" wx:for-index="fileidx" class="file-box-item">
+							<image src="/cmpts/public/file/images/{{itm.ext}}.png" /><text class="name">{{itm.name}}</text>
+						</view>
+					</view>
+				</block>
+				<block wx:else>{{item.val}}</block>
+
+			</view>
+		</view>
+	</view>
+
+</view>
+
+<view class="step-box shadow-project">
+	<view class="list">
+		<!---apply step begin-->
+		<view class="item">
+			<view class="left">
+				<view class="num bg-project">1</view>
+				<view class="line"></view>
+			</view>
+			<view class="right">
+				<view class="title bg-project light">提交审批</view>
+				<view class="detail">
+					<view class="content text-grey">{{flow.FLOW_ADD_TIME}}</view>
+					<view class="content">申请人：{{flow.FLOW_OBJ.person}}</view>
+					<view class="content">所属部门：{{flow.FLOW_USER_DEPT}}</view>
+				</view>
+			</view>
+		</view>
+		<!---apply step END-->
+
+		<view class="item" wx:for="{{flow.FLOW_LIST}}" wx:key="k">
+			<view class="left">
+				<view class="num {{item.state==8?'bg-orange':'bg-project'}}">{{item.step+1}}</view>
+				<view class="line"></view>
+			</view>
+			<view class="right">
+				<view class="title bg-project light">{{item.nativeDept}}审批</view>
+				<view class="detail">
+					<view class="content text-grey">{{item.time}}</view>
+					<view class="content">办理人：{{item.userName}}</view>
+					<view wx:if="{{item.state==1}}" class="content text-green">审批意见：[通过]{{item.obj.desc}}</view>
+					<view wx:elif="{{item.state==8}}" class="content text-orange text-bold">审批意见：[未通过]{{item.obj.desc}}</view>
+				</view>
+
+
+			</view>
+		</view>
+	</view>
+</view>
